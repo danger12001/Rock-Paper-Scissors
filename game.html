@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/style.css" rel="stylesheet">
+
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+  <div id="key"> rock = 0, paper = 1, scissors = 2  </div>
+    <div id="displayMessage"> Result will be posted here</div>
+    <button onClick="rockClick()" id="rock"> <img src="images/rock.jpg"> </div></a>
+    <button onClick="paperClick()" id="paper"><img src="images/paper.jpg"></div></a>
+    <button onClick="scissorClick()" id="scissors"> <img src="images/scissors.png"></div></a>
+
+
+    <script>
+    var messageDisplay = document.getElementById("displayMessage");
+    var userAnswer = "";
+    var rock = 0;
+    var paper = 1;
+    var scissors = 2;
+    var ai = "";
+
+    var randomNumber = function(){
+  return  Math.random() * (3 - 0) + 0;
+    }
+
+    var tie = "The game has tied" + ", The computer played: ";
+    var win = "You Win!" + ", The computer played: " ;
+    var lose = "You have been beaten by a computer!" + ", The computer played: ";
+
+    var rockClick = function(){
+      var ai = parseInt(randomNumber());
+      console.log(ai);
+    userAnswer = rock;
+    if(ai === rock ){
+    messageDisplay.innerHTML = tie + ai;
+    }
+
+    else if (ai === paper){
+      messageDisplay.innerHTML = lose + ai;
+    }
+
+    else if (ai === scissors){
+      messageDisplay.innerHTML = win + ai;
+    }
+    };
+    var paperClick = function(){
+      var ai = parseInt(randomNumber());
+      console.log(ai);
+    userAnswer = paper;
+     if (ai === rock){
+      messageDisplay.innerHTML =  win + ai;
+    }
+
+    else if (ai === paper){
+      messageDisplay.innerHTML =   tie + ai;
+    }
+
+    else if (ai === scissors){
+      messageDisplay.innerHTML =   lose + ai;
+    }
+    };
+    var scissorClick = function(){
+      var ai = parseInt(randomNumber());
+      console.log(ai);
+    userAnswer = scissors;
+
+     if (ai === rock){
+      messageDisplay.innerHTML =  lose + ai;
+    }
+
+    else if (ai === paper){
+      messageDisplay.innerHTML =   win + ai;
+    }
+
+    else if (ai === scissors){
+      messageDisplay.innerHTML =   tie + ai;
+    }
+    };
+
+    </script>
+    <!-- <script src="js/RPS.js"></script> -->
+</body>
+</html>

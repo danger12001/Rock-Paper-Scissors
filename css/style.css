@@ -1,0 +1,54 @@
+#displayMessage {
+height: 50px;
+width: 100%;
+border: 1px solid White;
+color: white;
+font-size: 35px;
+text-align: center;
+}
+#key {
+height: 50px;
+width: 100%;
+border: 1px solid White;
+color: white;
+font-size: 40px;
+text-align: center;
+display: inline-block;
+margin-bottom: 30px;
+}
+#rock {
+border: 1px solid black;
+width: 32%;
+background-color: black;
+display: inline-block;
+color: black;
+text-align: center;
+line-height: 50px;
+margin-left: 30px;
+margin-top: 50px;
+}
+#paper {
+  border: 1px solid black;
+  /*height: 50px;*/
+  background-color: black;
+  width: 32%;
+  display: inline-block;
+  color: black;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 50px;
+}
+#scissors {
+  border: 1px solid black;
+  /*height: 50px;*/
+  background-color: black;
+  width: 32%;
+  display: inline-block;
+  color: black;
+  text-align: center;
+  line-height: 50px;
+margin-top: 50px;
+}
+body {
+  background-color: black;
+}
