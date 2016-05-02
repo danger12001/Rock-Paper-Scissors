@@ -6,14 +6,10 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-<<<<<<< HEAD
     <div id="displayMessage"> Result will be posted here</div>
     <div id="result-container">
-=======
     <div id="displayMessage"> Result will be posted here: </div>
     <div id="result-container">
-
->>>>>>> master
       <div id="Player" class="display"></div>
       VS
       <div id="Computer" class="display"></div>
@@ -21,10 +17,6 @@
     <button onClick="rockClick()" id="rock"> <img src="images/rock.jpg"> </div></a>
     <button onClick="paperClick()" id="paper"><img src="images/paper.jpg"></div></a>
     <button onClick="scissorClick()" id="scissors"> <img src="images/scissors.png"></div></a>
-<<<<<<< HEAD
-
-
-=======
 <div id="container">
   <ul>
 <li>Total Games Played: <div id="counter"></div></li>
@@ -33,7 +25,6 @@
 <li>Total Games Tied: <div id="tieCounter"></div></li>
   </ul>
 </div>
->>>>>>> master
     <script>
     var messageDisplay = document.getElementById("displayMessage");
     var userAnswer = "";
@@ -43,10 +34,6 @@
     var ai = "";
     var player = document.getElementById("Player");
     var computer = document.getElementById("Computer");
-<<<<<<< HEAD
-
-
-=======
     var counter = document.getElementById("counter");
     var winCounter = document.getElementById("winCounter");
     var loseCounter = document.getElementById("loseCounter");
@@ -58,7 +45,6 @@
     winCounter.innerHTML = winCount;
     loseCounter.innerHTML = loseCount;
     tieCounter.innerHTML = tieCount;
->>>>>>> master
     var randomNumber = function(){
   return  Math.random() * (3 - 0) + 0;
     }
@@ -68,10 +54,7 @@
     var lose = "YOU LOSE!";
 
     var rockClick = function(){
-<<<<<<< HEAD
-=======
       counter.innerHTML = count += 1;
->>>>>>> master
       var rockImg = "images/rock.jpg";
       var paperImg = "images/paper.jpg";
       var scissorImg = "images/scissors.png";
@@ -93,10 +76,7 @@
         computer.innerHTML = "<img src='"+scissorImg+"' alt='my image'>";
       }
     messageDisplay.innerHTML = tie;
-<<<<<<< HEAD
-=======
     tieCounter.innerHTML = tieCount += 1;
->>>>>>> master
 
     }
 
@@ -114,10 +94,7 @@
         ai = "Scissors";
       }
       messageDisplay.innerHTML = lose;
-<<<<<<< HEAD
-=======
       loseCounter.innerHTML = loseCount += 1;
->>>>>>> master
     }
 
     else if (ai === scissors){
@@ -134,17 +111,14 @@
         ai = "Scissors";
       }
       messageDisplay.innerHTML = win;
-<<<<<<< HEAD
     }
     };
     var paperClick = function(){
-=======
       winCounter.innerHTML = winCount += 1;
     }
     };
     var paperClick = function(){
       counter.innerHTML = count += 1;
->>>>>>> master
       var rockImg = "images/rock.jpg";
       var paperImg = "images/paper.jpg";
       var scissorImg = "images/scissors.png";
@@ -166,10 +140,7 @@
          ai = "Scissors";
        }
       messageDisplay.innerHTML =  win;
-<<<<<<< HEAD
-=======
       winCounter.innerHTML = winCount += 1;
->>>>>>> master
     }
 
     else if (ai === paper){
@@ -186,10 +157,7 @@
         ai = "Scissors";
       }
       messageDisplay.innerHTML =   tie;
-<<<<<<< HEAD
-=======
       tieCounter.innerHTML = tieCount += 1;
->>>>>>> master
     }
 
     else if (ai === scissors){
@@ -206,17 +174,14 @@
         ai = "Scissors";
       }
       messageDisplay.innerHTML =   lose;
-<<<<<<< HEAD
     }
     };
     var scissorClick = function(){
-=======
       loseCounter.innerHTML = loseCount += 1;
     }
     };
     var scissorClick = function(){
       counter.innerHTML = count += 1;
->>>>>>> master
       var rockImg = "images/rock.jpg";
       var paperImg = "images/paper.jpg";
       var scissorImg = "images/scissors.png";
@@ -238,10 +203,7 @@
          computer.innerHTML = "<img src='"+scissorImg+"' alt='my image'>";
          ai = "Scissors";
        }
-<<<<<<< HEAD
-=======
 loseCounter.innerHTML = loseCount += 1;
->>>>>>> master
       messageDisplay.innerHTML =  lose;
     }
 
@@ -259,10 +221,7 @@ loseCounter.innerHTML = loseCount += 1;
         ai = "Scissors";
       }
       messageDisplay.innerHTML =   win;
-<<<<<<< HEAD
-=======
       winCounter.innerHTML = winCount += 1;
->>>>>>> master
     }
 
     else if (ai === scissors){
@@ -278,10 +237,7 @@ loseCounter.innerHTML = loseCount += 1;
         computer.innerHTML = "<img src='"+scissorImg+"' alt='my image'>";
         ai = "Scissors";
       }
-<<<<<<< HEAD
-=======
 tieCounter.innerHTML = tieCount += 1;
->>>>>>> master
       messageDisplay.innerHTML =   tie;
     }
     };
