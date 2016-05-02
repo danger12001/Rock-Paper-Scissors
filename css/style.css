@@ -1,20 +1,28 @@
 #displayMessage {
-height: 50px;
+height: 100px;
 width: 100%;
 border: 1px solid White;
 color: white;
-font-size: 35px;
+font-size: 50px;
 text-align: center;
+line-height: 100px;
 }
-#key {
-height: 50px;
-width: 100%;
-border: 1px solid White;
-color: white;
-font-size: 40px;
-text-align: center;
-display: inline-block;
-margin-bottom: 30px;
+#result-container {
+  margin-top: 50px;
+  height: 250px;
+  width: 100%;
+  /*border: 1px solid White;*/
+  color: white;
+  font-size: 75px;
+  text-align: center;
+  line-height: 250px;
+}
+.display {
+  /*border: 1px solid white;*/
+  width: 45%;
+  height: auto;
+  display: inline-block;
+  /*margin: 1px;*/
 }
 #rock {
 border: 1px solid black;

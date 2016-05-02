@@ -6,8 +6,12 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-  <div id="key"> rock = 0, paper = 1, scissors = 2  </div>
     <div id="displayMessage"> Result will be posted here</div>
+    <div id="result-container">
+      <div id="Player" class="display"></div>
+      VS
+      <div id="Computer" class="display"></div>
+    </div>
     <button onClick="rockClick()" id="rock"> <img src="images/rock.jpg"> </div></a>
     <button onClick="paperClick()" id="paper"><img src="images/paper.jpg"></div></a>
     <button onClick="scissorClick()" id="scissors"> <img src="images/scissors.png"></div></a>
@@ -20,62 +24,186 @@
     var paper = 1;
     var scissors = 2;
     var ai = "";
+    var player = document.getElementById("Player");
+    var computer = document.getElementById("Computer");
+
 
     var randomNumber = function(){
   return  Math.random() * (3 - 0) + 0;
     }
 
-    var tie = "The game has tied" + ", The computer played: ";
-    var win = "You Win!" + ", The computer played: " ;
-    var lose = "You have been beaten by a computer!" + ", The computer played: ";
+    var tie = "TIE!";
+    var win = "YOU WIN!";
+    var lose = "YOU LOSE!";
 
     var rockClick = function(){
+      var rockImg = "images/rock.jpg";
+      var paperImg = "images/paper.jpg";
+      var scissorImg = "images/scissors.png";
+      player.innerHTML = "<img src='"+rockImg+"' alt='my image'>";
       var ai = parseInt(randomNumber());
       console.log(ai);
     userAnswer = rock;
     if(ai === rock ){
-    messageDisplay.innerHTML = tie + ai;
+      if(ai === 0){
+        ai = "Rock";
+        computer.innerHTML = "<img src='"+rockImg+"' alt='my image'>";
+      }
+      else if(ai === 1){
+        ai = "Paper";
+        computer.innerHTML = "<img src='"+paperImg+"' alt='my image'>";
+      }
+      else if(ai === 2){
+        ai = "Scissors";
+        computer.innerHTML = "<img src='"+scissorImg+"' alt='my image'>";
+      }
+    messageDisplay.innerHTML = tie;
+
     }
 
     else if (ai === paper){
-      messageDisplay.innerHTML = lose + ai;
+      if(ai === 0){
+        ai = "Rock";
+        computer.innerHTML = "<img src='"+rockImg+"' alt='my image'>";
+      }
+      else if(ai === 1){
+        computer.innerHTML = "<img src='"+paperImg+"' alt='my image'>";
+        ai = "Paper";
+      }
+      else if(ai === 2){
+        computer.innerHTML = "<img src='"+scissorImg+"' alt='my image'>";
+        ai = "Scissors";
+      }
+      messageDisplay.innerHTML = lose;
     }
 
     else if (ai === scissors){
-      messageDisplay.innerHTML = win + ai;
+      if(ai === 0){
+        ai = "Rock";
+        computer.innerHTML = "<img src='"+rockImg+"' alt='my image'>";
+      }
+      else if(ai === 1){
+        computer.innerHTML = "<img src='"+paperImg+"' alt='my image'>";
+        ai = "Paper";
+      }
+      else if(ai === 2){
+        computer.innerHTML = "<img src='"+scissorImg+"' alt='my image'>";
+        ai = "Scissors";
+      }
+      messageDisplay.innerHTML = win;
     }
     };
     var paperClick = function(){
+      var rockImg = "images/rock.jpg";
+      var paperImg = "images/paper.jpg";
+      var scissorImg = "images/scissors.png";
+      player.innerHTML = "<img src='"+paperImg+"' alt='my image'>";
       var ai = parseInt(randomNumber());
       console.log(ai);
     userAnswer = paper;
      if (ai === rock){
-      messageDisplay.innerHTML =  win + ai;
+       if(ai === 0){
+         computer.innerHTML = "<img src='"+rockImg+"' alt='my image'>";
+         ai = "Rock";
+       }
+       else if(ai === 1){
+         computer.innerHTML = "<img src='"+paperImg+"' alt='my image'>";
+         ai = "Paper";
+       }
+       else if(ai === 2){
+         computer.innerHTML = "<img src='"+scissorImg+"' alt='my image'>";
+         ai = "Scissors";
+       }
+      messageDisplay.innerHTML =  win;
     }
 
     else if (ai === paper){
-      messageDisplay.innerHTML =   tie + ai;
+      if(ai === 0){
+        computer.innerHTML = "<img src='"+rockImg+"' alt='my image'>";
+        ai = "Rock";
+      }
+      else if(ai === 1){
+        computer.innerHTML = "<img src='"+paperImg+"' alt='my image'>";
+        ai = "Paper";
+      }
+      else if(ai === 2){
+        computer.innerHTML = "<img src='"+scissorImg+"' alt='my image'>";
+        ai = "Scissors";
+      }
+      messageDisplay.innerHTML =   tie;
     }
 
     else if (ai === scissors){
-      messageDisplay.innerHTML =   lose + ai;
+      if(ai === 0){
+        computer.innerHTML = "<img src='"+rockImg+"' alt='my image'>";
+        ai = "Rock";
+      }
+      else if(ai === 1){
+        computer.innerHTML = "<img src='"+paperImg+"' alt='my image'>";
+        ai = "Paper";
+      }
+      else if(ai === 2){
+        computer.innerHTML = "<img src='"+scissorImg+"' alt='my image'>";
+        ai = "Scissors";
+      }
+      messageDisplay.innerHTML =   lose;
     }
     };
     var scissorClick = function(){
+      var rockImg = "images/rock.jpg";
+      var paperImg = "images/paper.jpg";
+      var scissorImg = "images/scissors.png";
+      player.innerHTML = "<img src='"+scissorImg+"' alt='my image'>";
       var ai = parseInt(randomNumber());
       console.log(ai);
     userAnswer = scissors;
 
      if (ai === rock){
-      messageDisplay.innerHTML =  lose + ai;
+       computer.innerHTML = "<img src='"+rockImg+"' alt='my image'>";
+       if(ai === 0){
+         ai = "Rock";
+       }
+       else if(ai === 1){
+         computer.innerHTML = "<img src='"+paperImg+"' alt='my image'>";
+         ai = "Paper";
+       }
+       else if(ai === 2){
+         computer.innerHTML = "<img src='"+scissorImg+"' alt='my image'>";
+         ai = "Scissors";
+       }
+      messageDisplay.innerHTML =  lose;
     }
 
     else if (ai === paper){
-      messageDisplay.innerHTML =   win + ai;
+      if(ai === 0){
+        computer.innerHTML = "<img src='"+rockImg+"' alt='my image'>";
+        ai = "Rock";
+      }
+      else if(ai === 1){
+        computer.innerHTML = "<img src='"+paperImg+"' alt='my image'>";
+        ai = "Paper";
+      }
+      else if(ai === 2){
+        computer.innerHTML = "<img src='"+scissorImg+"' alt='my image'>";
+        ai = "Scissors";
+      }
+      messageDisplay.innerHTML =   win;
     }
 
     else if (ai === scissors){
-      messageDisplay.innerHTML =   tie + ai;
+      if(ai === 0){
+        computer.innerHTML = "<img src='"+rockImg+"' alt='my image'>";
+        ai = "Rock";
+      }
+      else if(ai === 1){
+        computer.innerHTML = "<img src='"+paperImg+"' alt='my image'>";
+        ai = "Paper";
+      }
+      else if(ai === 2){
+        computer.innerHTML = "<img src='"+scissorImg+"' alt='my image'>";
+        ai = "Scissors";
+      }
+      messageDisplay.innerHTML =   tie;
     }
     };
 
