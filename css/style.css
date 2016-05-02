@@ -24,6 +24,37 @@ line-height: 100px;
   display: inline-block;
   /*margin: 1px;*/
 }
+#counter {
+  /*border: 1px solid white;*/
+  /*height: 25px;*/
+  /*width: 25px;*/
+  color: white;
+  display: inline-block;
+}
+#winCounter {
+  /*border: 1px solid white;*/
+  /*height: 25px;*/
+  /*width: 25px;*/
+  color: white;
+  display: inline-block;
+}
+#tieCounter {
+  /*border: 1px solid white;*/
+  /*height: 25px;*/
+  /*width: 25px;*/
+  color: white;
+  display: inline-block;
+}
+#loseCounter {
+  /*border: 1px solid white;*/
+  /*height: 25px;*/
+  /*width: 25px;*/
+  color: white;
+  display: inline-block;
+}
+#container {
+  color: white;
+}
 #rock {
 border: 1px solid black;
 width: 32%;
