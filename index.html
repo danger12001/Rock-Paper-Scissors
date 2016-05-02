@@ -6,10 +6,9 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <div id="displayMessage"> Result will be posted here</div>
-    <div id="result-container">
     <div id="displayMessage"> Result will be posted here: </div>
     <div id="result-container">
+
       <div id="Player" class="display"></div>
       VS
       <div id="Computer" class="display"></div>
@@ -111,9 +110,6 @@
         ai = "Scissors";
       }
       messageDisplay.innerHTML = win;
-    }
-    };
-    var paperClick = function(){
       winCounter.innerHTML = winCount += 1;
     }
     };
@@ -174,9 +170,6 @@
         ai = "Scissors";
       }
       messageDisplay.innerHTML =   lose;
-    }
-    };
-    var scissorClick = function(){
       loseCounter.innerHTML = loseCount += 1;
     }
     };
